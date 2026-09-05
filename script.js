@@ -10,7 +10,7 @@ const portfolioData = {
                         cover: "images/cdnahlad.png", 
                         description: `The project comprises a set of five CDs featuring traditional instrumental music from South Asian countries, addressing the scarcity of such world music collections on the Slovak market. The visual design of the individual covers and disc prints draws inspiration from local flora, fauna, and cultural traditions, rendered as digital collages using Adobe Photoshop and Illustrator.
 
-A unified visual style—based on distinctive color palettes and traditional ornaments specific to each country ties the entire series together. The complete collection is housed in a shared case that, beyond its retail function, serves as a practical stand and storage unit.`, 
+A unified visual style based on distinctive color palettes and traditional ornaments specific to each country ties the entire series together. The complete collection is housed in a shared case that, beyond its retail function, serves as a practical stand and storage unit.`, 
                         subGalleries: [
                             {
                                 title: "1. India",
