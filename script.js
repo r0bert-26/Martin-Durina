@@ -1,3 +1,32 @@
+/* ==========================================
+   1. DETEKCIA INSTAGRAM / IN-APP PREHLIADAČA
+   ========================================== */
+(function handleInAppBrowser() {
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    const isInstagram = ua.indexOf('Instagram') > -1;
+    const isFacebook = (ua.indexOf('FBAN') > -1) || (ua.indexOf('FBAV') > -1);
+
+    if (isInstagram || isFacebook) {
+        if (/Android/i.test(ua)) {
+            const cleanUrl = window.location.href.replace(/^https?:\/\//, '');
+            window.location.href = `intent://${cleanUrl}#Intent;scheme=https;package=com.android.chrome;end`;
+        } else {
+            window.addEventListener('DOMContentLoaded', () => {
+                if (!document.getElementById('inapp-notice')) {
+                    const notice = document.createElement('div');
+                    notice.id = 'inapp-notice';
+                    notice.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#e4405f;color:#fff;text-align:center;padding:10px;font-size:12px;z-index:99999;font-weight:bold;';
+                    notice.innerHTML = 'Pre plný zážitok klikni na 3 bodky hore vpravo a zvoľ "Otvoriť v prehliadači Safari".';
+                    document.body.prepend(notice);
+                }
+            });
+        }
+    }
+})();
+
+/* ==========================================
+   2. DATA PORTFÓLIA
+   ========================================== */
 const portfolioData = {
     graphics: {
         title: "GRAPHICS",
@@ -187,12 +216,16 @@ To see click: <a href="https://heyzine.com/flip-book/42fec0d2b4.html" target="_b
 let currentGallery = [];
 let currentImgIndex = 0;
 
-// Bezpečné prepínanie sekcií
-function navigateTo(viewId) {
+/* ==========================================
+   3. NAVIGÁCIA A PODPORA PRE TLAČIDLO/GESTO SPAŤ
+   ========================================== */
+
+// Bezpečné prepínanie sekcií s zápisom do histórie
+function navigateTo(viewId, isBackAction = false) {
     const targetView = document.getElementById(viewId);
     if (!targetView) {
         console.warn(`Sekcia s ID "${viewId}" sa v HTML nenachádza.`);
-        return; // Zabráni skrytiu celej obrazovky
+        return;
     }
 
     document.querySelectorAll('.view').forEach(view => {
@@ -200,10 +233,28 @@ function navigateTo(viewId) {
     });
 
     targetView.classList.add('active');
+
+    // Zapíšeme stav do histórie prehliadača len vtedy, ak udalosť nešla zo systémového tlačidla späť
+    if (!isBackAction) {
+        history.pushState({ viewId: viewId }, '', '#' + viewId);
+    }
+
     window.scrollTo(0, 0);
 }
 
-// Otvorenie kategórie (tolerantné k veľkým/malým písmenám a synonymám)
+// Odchytávanie gesta/tlačidla SPAŤ v systéme mobilu
+window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.viewId) {
+        navigateTo(event.state.viewId, true);
+    } else {
+        navigateTo('view-home', true);
+    }
+});
+
+/* ==========================================
+   4. LOGIKA PORTFÓLIA A GALÉRIÍ
+   ========================================== */
+
 function openCategory(categoryKey) {
     if (!categoryKey) return;
 
@@ -255,7 +306,6 @@ function openCategory(categoryKey) {
     navigateTo('view-category');
 }
 
-// Otvorenie projektu
 function openProject(project) {
     const pTitle = document.getElementById('project-title');
     if (pTitle) pTitle.innerText = project.title;
@@ -355,7 +405,10 @@ function openProject(project) {
     navigateTo('view-project');
 }
 
-/* --- LIGHTBOX GALÉRIA --- */
+/* ==========================================
+   5. LIGHTBOX GALÉRIA
+   ========================================== */
+
 function openLightbox(index, images) {
     if (!images || images.length === 0) return;
     currentGallery = images;
@@ -410,8 +463,17 @@ function updateModalNav() {
     }
 }
 
-// Inicializácia udalosťových poslucháčov
+/* ==========================================
+   6. INICIALIZÁCIA PRI NAČÍTANÍ STRÁNKY
+   ========================================== */
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Nastavenie prvej položky v histórii prehliadača
+    const currentHash = window.location.hash.replace('#', '');
+    const initialView = currentHash || 'view-home';
+    history.replaceState({ viewId: initialView }, '', '#' + initialView);
+
+    // Poslucháče pre Lightbox
     const modal = document.getElementById('image-modal');
     const closeBtn = document.querySelector('.modal-close');
     const prevBtn = document.querySelector('.modal-prev');
