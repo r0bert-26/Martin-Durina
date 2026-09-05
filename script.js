@@ -14,27 +14,27 @@ A unified visual style—based on distinctive color palettes and traditional orn
                         subGalleries: [
                             {
                                 title: "1. India",
-                                images: ["images/ind1.jpg", "images/ind2.jpg", "images/ind3.jpg", "images/ind4.jpg"]
+                                images: ["images/ind1.JPG", "images/ind2.JPG", "images/ind3.JPG", "images/ind4.JPG"]
                             },
                             {
                                 title: "2. Nepal",
-                                images: ["images/nep1.jpg", "images/nep2.jpg", "images/nep3.jpg", "images/nep4.jpg"]
+                                images: ["images/nep1.JPG", "images/nep2.JPG", "images/nep3.JPG", "images/nep4.JPG"]
                             },
                             {
                                 title: "3. Sri Lanka",
-                                images: ["images/sri1.jpg", "images/sri2.jpg", "images/sri3.jpg", "images/sri4.jpg"]
+                                images: ["images/sri1.JPG", "images/sri2.JPG", "images/sri3.JPG", "images/sri4.JPG"]
                             },
                             {
                                 title: "4. Bhutan",
-                                images: ["images/bhu1.jpg", "images/bhu2.jpg", "images/bhu3.jpg", "images/bhu4.jpg"]
+                                images: ["images/bhu1.JPG", "images/bhu2.JPG", "images/bhu3.JPG", "images/bhu4.JPG"]
                             },
                             {
                                 title: "5. Bangladesh",
-                                images: ["images/ban1.jpg", "images/ban2.jpg", "images/ban3.jpg", "images/ban4.jpg"]
+                                images: ["images/ban1.JPG", "images/ban2.JPG", "images/ban3.JPG", "images/ban4.JPG"]
                             },
                             {
                                 title: "6. Box & Packaging",
-                                images: ["images/kr1.jpg","images/kr2.jpg","images/kr3.jpg","images/kr4.jpg","images/kr5.jpg","images/kr6.jpg","images/kr7.jpg","images/kr8.jpg","images/kr9.jpg","images/kr10.jpg"]
+                                images: ["images/kr1.JPG","images/kr2.JPG","images/kr3.JPG","images/kr4.JPG","images/kr5.JPG","images/kr6.JPG","images/kr7.JPG","images/kr8.JPG","images/kr9.JPG","images/kr10.JPG"]
                             }
                         ]
                     },
@@ -138,10 +138,10 @@ To see click: <a href="https://heyzine.com/flip-book/42fec0d2b4.html" target="_b
             {
                 name: "Uncategorized",
                 projects: [
-                    { title: "Selected Photos", cover: "images/tehlanahlad01.png", description: `A selection of photographs capturing the atmosphere of the Tehláreň festival, taken in 2024 and 2025.`, images: ["images/t1.jpg","images/t2.jpg","images/t3.jpg","images/t4.jpg","images/t5.jpg","images/t6.jpg","images/t7.jpg","images/t8.jpg","images/t9.jpg","images/t10.jpg","images/t11.jpg","images/t12.jpg","images/t13.jpg","images/t14.jpg","images/t15.jpg","images/t16.jpg","images/t17.jpg","images/t18.jpg"] },
+                    { title: "Selected Photos", cover: "images/tehlanahlad01.png", description: `A selection of photographs capturing the atmosphere of the Tehláreň festival, taken in 2024 and 2025.`, images: ["images/t1.jpg","images/t2.jpg","images/t3.jpg","images/t4.jpg","images/t5.jpg","images/t6.jpg","images/t7.jpg","images/t8.jpg","images/t9.jpg","images/t10.jpg","images/t11.jpg","images/t12.jpg","images/t13.jpg","images/t14.JPG","images/t15.JPG","images/t16.JPG","images/t17.JPG","images/t18.JPG"] },
                     { title: "Photo Project 2", cover: "images/fabrika01nahlad.png", description: `Photos capturing the atmosphere trought my eyes during the first year of the Fabrika 61 festival in Partizánske.`, images: ["images/f1.jpg","images/f2.jpg","images/f3.jpg","images/f4.jpg","images/f5.jpg","images/f6.jpg","images/f7.jpg"] },
                     { title: "Photo Project 3", cover: "images/starynahlad.png", description: `A collection focused on the fleeting nature of life. It features several scenes capturing static moments in the lives of the elderly. The collection serves as a way to remember.`, images: ["images/s1.jpg","images/s2.jpg","images/s3.jpg","images/s4.jpg","images/s5.jpg","images/s6.jpg","images/s7.jpg","images/s8.jpg","images/s9.jpg","images/s10.jpg","images/s11.jpg"] },
-                    { title: "Photo Project 4", cover: "images/fabrika02nahlad.png", description: `Photos from the second edition of the Fabrika 61 festival in Partizánske. Unlike the heavy undertone of the photos from the first edition, here I play with the event's pleasant atmosphere.`, images: ["images/2f1.jpg","images/2f2.jpg","images/2f3.jpg","images/2f4.jpg","images/2f5.jpg","images/2f6.jpg","images/2f7.jpg","images/2f8.jpg","images/2f9.jpg","images/2f0.jpg"] },
+                    { title: "Photo Project 4", cover: "images/fabrika02nahlad.png", description: `Photos from the second edition of the Fabrika 61 festival in Partizánske. Unlike the heavy undertone of the photos from the first edition, here I play with the event's pleasant atmosphere.`, images: ["images/2f1.jpg","images/2f2.jpg","images/2f3.jpg","images/2f4.jpg","images/2f5.jpg","images/2f6.jpg","images/2f7.jpg","images/2f8.jpg","images/2f9.jpg","images/2f0.png"] },
                     { title: "Photo Project 5", cover: "images/motorkynahlad.png", description: `A presentation of a collection capturing the international cross-enduro race in Lehota pod Vtáčnikom. I focused on capturing the moment, slowing down the fast action, and freezing the riders in time.`, images: ["images/m1.jpg", "images/m2.jpg", "images/m3.jpg", "images/m4.jpg", "images/m5.jpg", "images/m6.jpg", "images/m7.jpg", "images/m8.jpg"] },
                     { title: "Photo Project 6", cover: "images/divadlonahlad01.png", description: `A selection of photos documenting the production "Verná nevera" (Faithful Infidelity), then in preparation under the direction of Peter Palik. These images were used to promote the production on the social media channels of DJGT Zvolen.`, images: ["images/d0.png","images/d1.png","images/d2.png","images/d3.png","images/d4.png","images/d5.png","images/d6.png","images/d7.png","images/d8.png","images/d9.png","images/d10.png"] }
                 ]
